@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className="fixed z-10 left-1/2 -translate-x-1/2 px-5 py-4 max-w-screen-lg w-full flex justify-between items-center gap-5 rounded-b-lg text-white bg-black/70">
 
             <Link to={HOME_PAGE} className="h-8 flex items-center gap-5 uppercase">
-                <img src={SchoolLogo} alt="1337 Logo" className="h-5" />
+                <SchoolLogo className="h-5" />
                 <div className="w-0.5 h-full bg-white"></div>
                 <div className="text-2xl">interns</div>
             </Link>

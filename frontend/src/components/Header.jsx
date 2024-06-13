@@ -18,7 +18,7 @@ const Header = ({ title, backgroundSource }) => {
 
             </div>
 
-            <img src={Separator} alt="Section seperator" className="absolute bottom-0" />
+            <Separator  className="absolute bottom-0"/>
 
         </header>
     );
