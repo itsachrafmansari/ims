@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <footer className="w-full text-white bg-gray-950">
 
-            <section className="mx-auto p-20 w-full max-w-screen-2xl flex justify-between items-center">
+            <section className="mx-auto p-10 w-full max-w-screen-2xl flex justify-between items-center">
 
                 <div className="space-y-5">
                     <p className="text-2xl font-bold">Ready to learn and showcase your talent?</p>
@@ -28,7 +28,7 @@ const Footer = () => {
 
             </section>
 
-            <section className="p-10 text-center bg-white/5">
+            <section className="p-5 text-center bg-white/5">
                 <p>2018 - {currentYear} @ 1337 is a non-profit.</p>
             </section>
 
