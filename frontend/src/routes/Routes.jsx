@@ -1,3 +1,9 @@
+// Extern URLs
+const schoolFacebookURL = "https://www.facebook.com/1337FutureIsLoading";
+const schoolInstagramURL = "https://www.instagram.com/1337_FutureIsLoading";
+const schoolXURL = "https://x.com/1337FIL";
+const schoolLinkedInURL = "https://www.linkedin.com/school/1337-coding-school/";
+const schoolYoutubeURL = "https://www.youtube.com/@1337FutureIsLoading/";
 
 // Public Routes
 const HOME_PAGE = "/";
