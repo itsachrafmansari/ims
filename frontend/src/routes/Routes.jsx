@@ -23,7 +23,13 @@ const DASHBOARD_PAGE = "/dashbaord";
 
 
 export {
+    schoolFacebookURL,
+    schoolInstagramURL,
+    schoolXURL,
+    schoolLinkedInURL,
+    schoolYoutubeURL,
     HOME_PAGE,
+    ERROR_PAGE,
     LOGIN_PAGE,
     SIGNUP_PAGE,
     ABOUT_PAGE,
@@ -34,5 +40,4 @@ export {
     OUR_TEAM_PAGE,
     LOGOUT_PAGE,
     DASHBOARD_PAGE,
-    ERROR_PAGE
 }

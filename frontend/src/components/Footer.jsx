@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { SIGNUP_PAGE } from "../routes/Routes";
+import { SIGNUP_PAGE, schoolFacebookURL, schoolInstagramURL, schoolLinkedInURL, schoolXURL, schoolYoutubeURL } from "../routes/Routes";
 
 const Footer = () => {
 
@@ -19,11 +19,11 @@ const Footer = () => {
 
                 <div className="flex items-center gap-5">
                     <span>Stay updated : </span>
-                    <a href="#"><FontAwesomeIcon icon={faFacebook} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
-                    <a href="#"><FontAwesomeIcon icon={faTwitter} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
-                    <a href="#"><FontAwesomeIcon icon={faInstagram} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
-                    <a href="#"><FontAwesomeIcon icon={faYoutube} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
-                    <a href="#"><FontAwesomeIcon icon={faLinkedinIn} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
+                    <a href={schoolFacebookURL}><FontAwesomeIcon icon={faFacebook} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
+                    <a href={schoolXURL}><FontAwesomeIcon icon={faTwitter} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
+                    <a href={schoolInstagramURL}><FontAwesomeIcon icon={faInstagram} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
+                    <a href={schoolYoutubeURL}><FontAwesomeIcon icon={faYoutube} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
+                    <a href={schoolLinkedInURL}><FontAwesomeIcon icon={faLinkedinIn} className="w-5 h-5 hover:text-mainColorOnHover transition-colors duration-default" /></a>
                 </div>
 
             </section>
