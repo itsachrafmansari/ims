@@ -1,3 +1,9 @@
+// Extern URLs
+const schoolFacebookURL = "https://www.facebook.com/1337FutureIsLoading";
+const schoolInstagramURL = "https://www.instagram.com/1337_FutureIsLoading";
+const schoolXURL = "https://x.com/1337FIL";
+const schoolLinkedInURL = "https://www.linkedin.com/school/1337-coding-school/";
+const schoolYoutubeURL = "https://www.youtube.com/@1337FutureIsLoading/";
 
 // Public Routes
 const HOME_PAGE = "/";
@@ -17,7 +23,13 @@ const DASHBOARD_PAGE = "/dashbaord";
 
 
 export {
+    schoolFacebookURL,
+    schoolInstagramURL,
+    schoolXURL,
+    schoolLinkedInURL,
+    schoolYoutubeURL,
     HOME_PAGE,
+    ERROR_PAGE,
     LOGIN_PAGE,
     SIGNUP_PAGE,
     ABOUT_PAGE,
@@ -28,5 +40,4 @@ export {
     OUR_TEAM_PAGE,
     LOGOUT_PAGE,
     DASHBOARD_PAGE,
-    ERROR_PAGE
 }

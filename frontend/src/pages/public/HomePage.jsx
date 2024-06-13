@@ -1,4 +1,3 @@
-import Separator from "../../assets/separator.svg";
 import Header from "../../components/Header";
 
 const HomePage = () => {
