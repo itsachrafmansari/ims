@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { ABOUT_PAGE, CONTACT_US_PAGE, DASHBOARD_PAGE, ERROR_PAGE, HOME_PAGE, INTERNS_PAGE, LOGIN_PAGE, LOGOUT_PAGE, OUR_TEAM_PAGE, PROJECTS_PAGE, SIGNUP_PAGE, WORKLIFE_PAGE } from "./Routes";
+import { ABOUT_PAGE, CONTACT_US_PAGE, DASHBOARD_PAGE, ERROR_PAGE, HOME_PAGE, INTERNS_PAGE, LOGIN_PAGE, LOGOUT_PAGE, OUR_TEAM_PAGE, PASSWORD_RESET_PAGE, PROJECTS_PAGE, SIGNUP_PAGE, WORKLIFE_PAGE } from "./Routes";
 import GuestLayout from "../layouts/GuestLayout";
 import UserLayout from "../layouts/UserLayout";
 import LogInPage from "../pages/public/LogInPage";
@@ -14,6 +14,7 @@ import WorkLifePage from "../pages/public/WorkLifePage";
 import ProjectsPage from "../pages/public/ProjectsPage";
 import InternsPage from "../pages/public/InternsPage";
 import ContactUsPage from "../pages/public/ContactUsPage";
+import PasswordResetPage from "../pages/public/PasswordResetPage";
 
 const Router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ const Router = createBrowserRouter([
             { path: HOME_PAGE, element: <HomePage /> },
             { path: LOGIN_PAGE, element: <LogInPage /> },
             { path: SIGNUP_PAGE, element: <SignUpPage /> },
+            { path: PASSWORD_RESET_PAGE, element: <PasswordResetPage /> },
             { path: ABOUT_PAGE, element: <AboutPage /> },
             { path: WORKLIFE_PAGE, element: <WorkLifePage /> },
             { path: PROJECTS_PAGE, element: <ProjectsPage /> },
