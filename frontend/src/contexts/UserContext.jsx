@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import UserAPI from "../api/UserAPI";
 
 const readFromLocalStorage = (key, defaultFallbackValue) => {
     const value = window.localStorage.getItem(key);
@@ -10,8 +11,10 @@ const writeToLocalStorage = (key, value) => {
 }
 
 const UserContextBase = createContext({
-    login: (email, password) => { },
-    logout: () => { },
+    logIn: (email, password) => { },
+    logOut: () => { },
+    signUp: () => { },
+    confirmEmail: () => { },
     user: {},
     setUser: (_userData) => { },
     authenticated: false,
@@ -40,18 +43,39 @@ const UserContestProvider = ({ children }) => {
         writeToLocalStorage("AUTHENTICATED", isAuthenticated);
     }
 
-    // Login and Logout
-    const login = (email, password) => {
+    // LogIn and LogOut
+    const logIn = (email, password) => {
 
     };
 
-    const logout = () => {
+    const logOut = () => {
         setUser({});
         setAuthenticated(false);
+        UserAPI.logout();
     };
 
+    const signUp = (firstName, lastName, email, password) => {
+        writeToLocalStorage("USER", {
+            firstName,
+            lastName,
+            email,
+            password,
+            emailConfirmed: false,
+        });
+    };
+
+    const confirmEmail = (email, confirmationToken) => {
+        writeToLocalStorage("USER", {
+            firstName,
+            lastName,
+            email,
+            password,
+            emailConfirmed: true,
+        });
+    }
+
     return (
-        <UserContextBase.Provider value={{ login, logout, user, setUser, authenticated, setAuthenticated }}>
+        <UserContextBase.Provider value={{ logIn, logOut, signUp, confirmEmail, user, setUser, authenticated, setAuthenticated }}>
             {children}
         </UserContextBase.Provider>
     );

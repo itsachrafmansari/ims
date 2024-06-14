@@ -1,7 +1,9 @@
 const UserAPI = {
-    getCsrfToken: () => {},
-    login: () => {},
-    logout: () => {},
+    getCsrfToken: () => { },
+    login: () => { },
+    logout: () => { },
+    signUp: () => { },
+    confirmEmail: () => { },
 }
 
 export default UserAPI;
