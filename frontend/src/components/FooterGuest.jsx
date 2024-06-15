@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { SIGNUP_PAGE, schoolFacebookURL, schoolInstagramURL, schoolLinkedInURL, schoolXURL, schoolYoutubeURL } from "../routes/Routes";
 
-const Footer = () => {
+const FooterGuest = () => {
 
     const currentYear = new Date().getFullYear();
 
@@ -36,4 +36,4 @@ const Footer = () => {
     );
 }
 
-export default Footer;
+export default FooterGuest;

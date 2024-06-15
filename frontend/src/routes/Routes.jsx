@@ -20,7 +20,7 @@ const OUR_TEAM_PAGE = "/team";
 
 // Private Routes
 const LOGOUT_PAGE = "/logout";
-const DASHBOARD_PAGE = "/dashbaord";
+const DASHBOARD_PAGE = "/dashboard";
 
 
 export {
