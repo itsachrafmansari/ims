@@ -5,10 +5,10 @@ const GuestStaticPageLayout = ({ title, headerBackgroundSource, children }) => {
     return (
         <>
             <Navbar />
-
             <Header title={title} backgroundSource={headerBackgroundSource} />
-
-            {children}
+            <div className="mx-auto w-full max-w-screen-xl">
+                {children}
+            </div>
         </>
     );
 }

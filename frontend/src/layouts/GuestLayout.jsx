@@ -1,15 +1,14 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
+import FooterGuest from "../components/FooterGuest";
 
 const GuestLayout = () => {
 
     return (
         <>
-            <main className="grow relative">
+            <main className="grow">
                 <Outlet />
             </main>
-
-            <Footer />
+            <FooterGuest />
         </>
     );
 }
