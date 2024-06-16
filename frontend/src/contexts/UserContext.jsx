@@ -1,4 +1,6 @@
 import { createContext, useContext, useState } from "react";
+import UserAPI from "../api/UserAPI";
+import InternAPI from "../api/InternAPI";
 
 const readFromLocalStorage = (key, defaultFallbackValue) => {
     const value = window.localStorage.getItem(key);
@@ -10,10 +12,14 @@ const writeToLocalStorage = (key, value) => {
 }
 
 const UserContextBase = createContext({
-    login: (email, password) => { },
-    logout: () => { },
+    logIn: async (email, password) => { },
+    logOut: () => { },
+    signUp: async () => { },
+    confirmEmail: () => { },
     user: {},
     setUser: (_userData) => { },
+    token: "",
+    setToken: () => { },
     authenticated: false,
     setAuthenticated: () => { },
 });
@@ -38,20 +44,56 @@ const UserContestProvider = ({ children }) => {
     const setAuthenticated = (isAuthenticated) => {
         _setAuthenticated(isAuthenticated);
         writeToLocalStorage("AUTHENTICATED", isAuthenticated);
-    }
-
-    // Login and Logout
-    const login = (email, password) => {
-
     };
 
-    const logout = () => {
+    const [token, _setToken] = useState(() => {
+        return readFromLocalStorage("TOKEN", null);
+    });
+
+    const setToken = (tokenValue) => {
+        _setToken(tokenValue);
+        writeToLocalStorage("TOKEN", tokenValue);
+    };
+
+    // LogIn and LogOut
+    const logIn = async (email, password) => {
+        UserAPI.logIn(email, password).then((response) => {
+            setUser({
+                firstName: response.data.first_name,
+                lastName: response.data.last_name,
+                email: response.data.email,
+                role: response.data.role,
+                portrait_image_url: response.data.portrait_image_url
+            });
+            setToken(response.token);
+            setAuthenticated(true);
+        });
+    };
+
+    const logOut = () => {
+        UserAPI.logOut();
         setUser({});
         setAuthenticated(false);
     };
 
+    const signUp = (firstName, lastName, email, password) => {
+        InternAPI.signUp(firstName, lastName, email, password).then((response) => {
+            logIn(email, password);
+        });
+    };
+
+    const confirmEmail = (email, confirmationToken) => {
+        writeToLocalStorage("USER", {
+            firstName,
+            lastName,
+            email,
+            password,
+            emailConfirmed: true,
+        });
+    }
+
     return (
-        <UserContextBase.Provider value={{ login, logout, user, setUser, authenticated, setAuthenticated }}>
+        <UserContextBase.Provider value={{ logIn, logOut, signUp, confirmEmail, user, setUser, token, setToken, authenticated, setAuthenticated }}>
             {children}
         </UserContextBase.Provider>
     );

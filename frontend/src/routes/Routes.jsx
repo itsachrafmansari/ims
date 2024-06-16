@@ -10,6 +10,7 @@ const HOME_PAGE = "/";
 const ERROR_PAGE = "*";
 const LOGIN_PAGE = "/login";
 const SIGNUP_PAGE = "/signup";
+const PASSWORD_RESET_PAGE = "/reset-password";
 const ABOUT_PAGE = "/about";
 const WORKLIFE_PAGE = "/worklife";
 const PROJECTS_PAGE = "/projects";
@@ -19,7 +20,7 @@ const OUR_TEAM_PAGE = "/team";
 
 // Private Routes
 const LOGOUT_PAGE = "/logout";
-const DASHBOARD_PAGE = "/dashbaord";
+const DASHBOARD_PAGE = "/dashboard";
 
 
 export {
@@ -32,6 +33,7 @@ export {
     ERROR_PAGE,
     LOGIN_PAGE,
     SIGNUP_PAGE,
+    PASSWORD_RESET_PAGE,
     ABOUT_PAGE,
     WORKLIFE_PAGE,
     PROJECTS_PAGE,
